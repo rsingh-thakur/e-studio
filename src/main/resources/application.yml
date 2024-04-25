@@ -1,3 +1,24 @@
 spring:
-  application:
-    name: E-studio
+ application:
+   name: E-studio
+
+ autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+    
+jpa:
+ database: mysql
+ show-sql: false
+ hibernate:
+  ddl-auto: update
+    
+ 
+ datasource:
+    platform: org.hibernate.dialect.MySQLDialect
+    url: jdbc:mysql://localhost:3306/e-studio
+    username: root
+    password:  
+    
+server:
+    port: 9293
+    
+ 
